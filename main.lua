@@ -21,7 +21,7 @@ function initUi()
   app.registerUi({["menu"] = "Correction - Green pen", ["callback"] = "correction"});
   app.registerUi({["menu"] = "Cancel - Orange thick pen", ["callback"] = "cancel"});
   app.registerUi({["menu"] = "Note to self - Light blue pen", ["callback"] = "notToSelf"});
-  app.registerUi({["menu"] = "Box answer - Magenta rectangle hilighter", ["callback"] = "boxAnswer"});
+  app.registerUi({["menu"] = "Box answer - Magenta rectangle highlighter", ["callback"] = "boxAnswer"});
 end
 
 -- Functions
@@ -65,7 +65,7 @@ end
 function boxAnswer()
   app.uiAction({["action"] = "ACTION_TOOL_HIGHLIGHTER"})
   app.uiAction({["action"] = "ACTION_TOOL_HIGHLIGHTER_SIZE_FINE"})
-  app.uiAction({["action"] = "ACTION_TOOL_HIGHLIGHTER_FILL"})
+  app.uiAction({["action"] = "ACTION_TOOL_HIGHLIGHTER_FILL", ["enabled"] = false})
   app.changeToolColor({["color"] = magenta, ["tool"] = "HIGHLIGHTER"})
   app.uiAction({["action"] = "ACTION_TOOL_DRAW_RECT"})
 end
